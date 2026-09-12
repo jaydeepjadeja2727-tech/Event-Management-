@@ -1,512 +1,386 @@
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, Helvetica, sans-serif;
-}
+/* ================= GENERAL ================= */
 
-html {
-scroll-behavior: smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-background: #f3f4f8;
-color: #26344f;
+    background: #f3f4f8;
+    color: #26344f;
+    min-height: 100vh;
 }
 
 
-/* =====================================================
-NAVIGATION BAR
-===================================================== */
+/* ================= HEADER ================= */
 
-.navbar {
-height: 54px;
-background: #293968;
-
-display: flex;
-align-items: center;
-justify-content: space-between;
-
-padding: 0 30px;
-
-color: white;
+header {
+    height: 60px;
+    background: #293968;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
-font-size: 20px;
-font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.nav-links {
-display: flex;
-gap: 25px;
+nav {
+    display: flex;
+    gap: 8px;
 }
 
-.nav-links a {
-color: white;
-text-decoration: none;
-font-size: 14px;
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-.nav-links a:hover {
-text-decoration: underline;
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.tab-btn.active {
+    background: #536aa9;
 }
 
 
-/* =====================================================
-HOME PAGE
-===================================================== */
+/* ================= TABS ================= */
+
+.tab-content {
+    display: none;
+    min-height: calc(100vh - 110px);
+}
+
+.active-tab {
+    display: block;
+}
+
+
+/* ================= HERO ================= */
 
 .hero {
-background: linear-gradient(
-135deg,
-#2d477f,
-#536aa9
-);
-
-color: white;
-
-text-align: center;
-
-padding: 42px 20px;
+    background: linear-gradient(135deg, #2d477f, #536aa9);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
 }
 
 .hero h1 {
-font-size: 28px;
-margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 12px;
 }
 
 .hero p {
-font-size: 15px;
-color: #dce3f3;
+    font-size: 15px;
+    color: #e0e5f2;
 }
 
 
-/* =====================================================
-EVENTS
-===================================================== */
+/* ================= CONTAINER ================= */
 
-.events-container {
-max-width: 1080px;
-margin: 30px auto;
-padding: 0 25px;
+.container {
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 0 25px;
 }
 
-.events-container h2 {
-font-size: 20px;
-color: #263d68;
-margin-bottom: 15px;
+.container h2 {
+    color: #293968;
+    margin-bottom: 15px;
 }
+
+.welcome-text {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+
+/* ================= PAGE TITLE ================= */
+
+.page-title {
+    background: #e9ebf2;
+    padding: 35px;
+    text-align: center;
+}
+
+.page-title h1 {
+    color: #293968;
+    margin-bottom: 8px;
+}
+
+.page-title p {
+    color: #777;
+}
+
+
+/* ================= EVENTS ================= */
 
 .events-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .event-card {
-background: white;
-
-border-radius: 7px;
-
-overflow: hidden;
-
-box-shadow:
-0 2px 8px rgba(0, 0, 0, 0.12);
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .event-image {
-height: 67px;
-background: #5068a4;
+    height: 100px;
+    background: #5068a4;
 }
 
 .event-content {
-padding: 14px;
+    padding: 20px;
 }
 
 .event-content h3 {
-font-size: 16px;
-margin-bottom: 6px;
-color: #293968;
+    color: #293968;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .event-content p {
-font-size: 12px;
-line-height: 1.4;
-color: #666;
-margin-bottom: 10px;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
-.event-info {
-font-size: 11px;
-color: #777;
-margin-bottom: 10px;
-}
-
-
-/* =====================================================
-BUTTON
-===================================================== */
-
-.btn {
-display: inline-block;
-
-background: #293968;
-
-color: white;
-
-text-decoration: none;
-
-border: none;
-
-padding: 8px 15px;
-
-border-radius: 4px;
-
-font-size: 12px;
-
-cursor: pointer;
-}
-
-.btn:hover {
-background: #1d2b55;
-}
-
-.full-btn {
-width: 100%;
-height: 34px;
-margin-top: 4px;
+.event-content span {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 7px;
 }
 
 
-/* =====================================================
-FORM PAGES
-===================================================== */
+/* ================= BUTTON ================= */
 
-.form-page {
-min-height: 100vh;
-background: #f3f4f8;
+.main-btn {
+    background: #293968;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 18px;
+    margin-top: 12px;
+    cursor: pointer;
+    font-size: 13px;
 }
 
-.form-container {
-width: 390px;
-max-width: 90%;
-
-margin: 70px auto 30px;
-
-background: white;
-
-padding: 25px;
-
-border-radius: 7px;
-
-box-shadow:
-0 2px 9px rgba(0, 0, 0, 0.13);
-}
-
-.form-container h2,
-.registration-container h2 {
-color: #293968;
-font-size: 21px;
-margin-bottom: 5px;
-}
-
-.form-description {
-font-size: 11px;
-color: #888;
-
-margin-bottom: 20px;
+.main-btn:hover {
+    background: #1d2b55;
 }
 
 
-/* =====================================================
-FORM ELEMENTS
-===================================================== */
+/* ================= FORM ================= */
 
-.form-group {
-margin-bottom: 14px;
+.form-box {
+    width: 400px;
+    max-width: 90%;
+    background: white;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
 }
 
-.form-group label {
-display: block;
-
-font-size: 11px;
-
-color: #555;
-
-margin-bottom: 5px;
+.form-box h2 {
+    color: #293968;
+    margin-bottom: 8px;
 }
 
-.form-group input,
-.form-group select {
-width: 100%;
-
-height: 34px;
-
-border: 1px solid #d7d7d7;
-
-border-radius: 4px;
-
-padding: 0 9px;
-
-font-size: 12px;
-
-outline: none;
+.form-box > p {
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 22px;
 }
 
-.form-group input:focus,
-.form-group select:focus {
-border-color: #536aa9;
+.form-box form {
+    display: flex;
+    flex-direction: column;
 }
 
-
-/* =====================================================
-FORM BOTTOM TEXT
-===================================================== */
-
-.form-bottom {
-text-align: center;
-
-font-size: 11px;
-
-color: #777;
-
-margin-top: 14px;
+.form-box label {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 6px;
 }
 
-.form-bottom a {
-color: #293968;
+.form-box input,
+.form-box select {
+    height: 38px;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    outline: none;
+}
 
-font-weight: bold;
-
-text-decoration: none;
+.form-box input:focus,
+.form-box select:focus {
+    border-color: #536aa9;
 }
 
 
-/* =====================================================
-REGISTRATION PAGE
-===================================================== */
+/* ================= BOTTOM TEXT ================= */
 
-.registration-container {
-width: 390px;
-max-width: 90%;
+.bottom-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
 
-margin: 50px auto;
-
-background: white;
-
-padding: 25px;
-
-border-radius: 7px;
-
-box-shadow:
-0 2px 9px rgba(0, 0, 0, 0.13);
+.bottom-text button {
+    background: none;
+    border: none;
+    color: #293968;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 
-/* =====================================================
-DASHBOARD
-===================================================== */
+/* ================= SUCCESS MESSAGE ================= */
 
-.dashboard {
-min-height: 100vh;
-
-background: #f3f4f8;
+.success-box {
+    display: none;
+    text-align: center;
 }
 
-.dashboard-header {
-background: #285377;
-
-color: white;
-
-padding: 35px 40px;
+.success-icon {
+    width: 55px;
+    height: 55px;
+    background: #58945d;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 20px;
 }
 
-.dashboard-header h1 {
-font-size: 29px;
+.success-box h2 {
+    color: #58945d;
+    margin-bottom: 10px;
 }
 
-
-/* =====================================================
-SUCCESS HOME
-===================================================== */
-
-.success-home {
-max-width: 920px;
-
-margin: 35px auto;
-
-padding: 0 25px;
+.success-box p {
+    color: #777;
+    margin-bottom: 15px;
 }
 
-.success-home-box {
-background: white;
-
-border-radius: 10px;
-
-padding: 30px;
-
-box-shadow:
-0 2px 7px rgba(0, 0, 0, 0.12);
-}
-
-.success-home-box h2 {
-color: #285377;
-
-font-size: 22px;
-
-margin-bottom: 30px;
-}
-
-.success-home-box h3 {
-font-size: 22px;
-
-color: #333;
-
-margin-bottom: 20px;
-}
-
-.simple-event {
-background: #f4f5f9;
-
-border-radius: 8px;
-
-padding: 18px 20px;
-
-margin-bottom: 12px;
-
-display: flex;
-
-justify-content: space-between;
-
-font-size: 16px;
+.success-message {
+    display: none;
+    background: #e8f5e9;
+    color: #4d8b52;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
 }
 
 
-/* =====================================================
-EVENT MANAGEMENT DASHBOARD
-===================================================== */
+/* ================= DASHBOARD ================= */
 
 .dashboard-container {
-max-width: 920px;
-
-margin: 0 auto;
-
-padding: 35px 25px;
+    max-width: 950px;
+    margin: 50px auto;
+    padding: 0 25px;
 }
 
 .dashboard-box {
-background: white;
-
-border-radius: 10px;
-
-padding: 30px;
-
-box-shadow:
-0 2px 6px rgba(0, 0, 0, 0.12);
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
 }
 
-.dashboard-box h2 {
-color: #285377;
-
-font-size: 26px;
-
-margin-bottom: 15px;
+.dashboard-box h1 {
+    color: #285377;
+    margin-bottom: 10px;
 }
 
-.success {
-color: #58945d;
-
-font-size: 16px;
-
-margin: 8px 0 28px;
+.dashboard-success {
+    color: #58945d;
+    margin-bottom: 25px;
 }
-
-
-/* =====================================================
-UPCOMING EVENT
-===================================================== */
 
 .upcoming-event {
-border: 2px solid #d9e0ef;
-
-border-radius: 10px;
-
-padding: 30px;
+    border: 2px solid #d9e0ef;
+    border-radius: 10px;
+    padding: 25px;
 }
 
-.upcoming-event h3 {
-color: #285377;
-
-font-size: 23px;
-
-margin-bottom: 22px;
+.upcoming-event h2 {
+    color: #285377;
+    margin-bottom: 20px;
 }
 
 .upcoming-event p {
-margin-bottom: 15px;
-
-font-size: 16px;
-
-color: #444;
-}
-
-.upcoming-event strong {
-color: #333;
+    margin-bottom: 12px;
+    color: #444;
 }
 
 
-/* =====================================================
-FOOTER
-===================================================== */
+/* ================= FOOTER ================= */
 
-.footer {
-text-align: center;
-
-color: #888;
-
-font-size: 12px;
-
-padding: 25px;
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    padding: 20px;
 }
 
 
-/* =====================================================
-RESPONSIVE DESIGN
-===================================================== */
+/* ================= MOBILE ================= */
 
 @media (max-width: 750px) {
 
-.events-grid {
-grid-template-columns: 1fr;
-}
+    header {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 12px;
+    }
 
-.navbar {
-padding: 0 15px;
-}
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-.nav-links {
-gap: 10px;
-}
+    .tab-btn {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
 
-.nav-links a {
-font-size: 11px;
-}
+    .hero h1 {
+        font-size: 24px;
+    }
 
-.hero h1 {
-font-size: 23px;
-}
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
 
-.dashboard-header {
-padding: 30px 20px;
-}
-
-.dashboard-header h1 {
-font-size: 23px;
-}
-
-.simple-event {
-flex-direction: column;
-gap: 8px;
-}
+    .form-box {
+        margin: 35px auto;
+    }
 }
