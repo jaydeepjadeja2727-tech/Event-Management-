@@ -1,0 +1,512 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background: #f3f4f8;
+color: #26344f;
+}
+
+
+/* =====================================================
+NAVIGATION BAR
+===================================================== */
+
+.navbar {
+height: 54px;
+background: #293968;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 0 30px;
+
+color: white;
+}
+
+.logo {
+font-size: 20px;
+font-weight: bold;
+}
+
+.nav-links {
+display: flex;
+gap: 25px;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+font-size: 14px;
+}
+
+.nav-links a:hover {
+text-decoration: underline;
+}
+
+
+/* =====================================================
+HOME PAGE
+===================================================== */
+
+.hero {
+background: linear-gradient(
+135deg,
+#2d477f,
+#536aa9
+);
+
+color: white;
+
+text-align: center;
+
+padding: 42px 20px;
+}
+
+.hero h1 {
+font-size: 28px;
+margin-bottom: 10px;
+}
+
+.hero p {
+font-size: 15px;
+color: #dce3f3;
+}
+
+
+/* =====================================================
+EVENTS
+===================================================== */
+
+.events-container {
+max-width: 1080px;
+margin: 30px auto;
+padding: 0 25px;
+}
+
+.events-container h2 {
+font-size: 20px;
+color: #263d68;
+margin-bottom: 15px;
+}
+
+.events-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 15px;
+}
+
+.event-card {
+background: white;
+
+border-radius: 7px;
+
+overflow: hidden;
+
+box-shadow:
+0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.event-image {
+height: 67px;
+background: #5068a4;
+}
+
+.event-content {
+padding: 14px;
+}
+
+.event-content h3 {
+font-size: 16px;
+margin-bottom: 6px;
+color: #293968;
+}
+
+.event-content p {
+font-size: 12px;
+line-height: 1.4;
+color: #666;
+margin-bottom: 10px;
+}
+
+.event-info {
+font-size: 11px;
+color: #777;
+margin-bottom: 10px;
+}
+
+
+/* =====================================================
+BUTTON
+===================================================== */
+
+.btn {
+display: inline-block;
+
+background: #293968;
+
+color: white;
+
+text-decoration: none;
+
+border: none;
+
+padding: 8px 15px;
+
+border-radius: 4px;
+
+font-size: 12px;
+
+cursor: pointer;
+}
+
+.btn:hover {
+background: #1d2b55;
+}
+
+.full-btn {
+width: 100%;
+height: 34px;
+margin-top: 4px;
+}
+
+
+/* =====================================================
+FORM PAGES
+===================================================== */
+
+.form-page {
+min-height: 100vh;
+background: #f3f4f8;
+}
+
+.form-container {
+width: 390px;
+max-width: 90%;
+
+margin: 70px auto 30px;
+
+background: white;
+
+padding: 25px;
+
+border-radius: 7px;
+
+box-shadow:
+0 2px 9px rgba(0, 0, 0, 0.13);
+}
+
+.form-container h2,
+.registration-container h2 {
+color: #293968;
+font-size: 21px;
+margin-bottom: 5px;
+}
+
+.form-description {
+font-size: 11px;
+color: #888;
+
+margin-bottom: 20px;
+}
+
+
+/* =====================================================
+FORM ELEMENTS
+===================================================== */
+
+.form-group {
+margin-bottom: 14px;
+}
+
+.form-group label {
+display: block;
+
+font-size: 11px;
+
+color: #555;
+
+margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+width: 100%;
+
+height: 34px;
+
+border: 1px solid #d7d7d7;
+
+border-radius: 4px;
+
+padding: 0 9px;
+
+font-size: 12px;
+
+outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+border-color: #536aa9;
+}
+
+
+/* =====================================================
+FORM BOTTOM TEXT
+===================================================== */
+
+.form-bottom {
+text-align: center;
+
+font-size: 11px;
+
+color: #777;
+
+margin-top: 14px;
+}
+
+.form-bottom a {
+color: #293968;
+
+font-weight: bold;
+
+text-decoration: none;
+}
+
+
+/* =====================================================
+REGISTRATION PAGE
+===================================================== */
+
+.registration-container {
+width: 390px;
+max-width: 90%;
+
+margin: 50px auto;
+
+background: white;
+
+padding: 25px;
+
+border-radius: 7px;
+
+box-shadow:
+0 2px 9px rgba(0, 0, 0, 0.13);
+}
+
+
+/* =====================================================
+DASHBOARD
+===================================================== */
+
+.dashboard {
+min-height: 100vh;
+
+background: #f3f4f8;
+}
+
+.dashboard-header {
+background: #285377;
+
+color: white;
+
+padding: 35px 40px;
+}
+
+.dashboard-header h1 {
+font-size: 29px;
+}
+
+
+/* =====================================================
+SUCCESS HOME
+===================================================== */
+
+.success-home {
+max-width: 920px;
+
+margin: 35px auto;
+
+padding: 0 25px;
+}
+
+.success-home-box {
+background: white;
+
+border-radius: 10px;
+
+padding: 30px;
+
+box-shadow:
+0 2px 7px rgba(0, 0, 0, 0.12);
+}
+
+.success-home-box h2 {
+color: #285377;
+
+font-size: 22px;
+
+margin-bottom: 30px;
+}
+
+.success-home-box h3 {
+font-size: 22px;
+
+color: #333;
+
+margin-bottom: 20px;
+}
+
+.simple-event {
+background: #f4f5f9;
+
+border-radius: 8px;
+
+padding: 18px 20px;
+
+margin-bottom: 12px;
+
+display: flex;
+
+justify-content: space-between;
+
+font-size: 16px;
+}
+
+
+/* =====================================================
+EVENT MANAGEMENT DASHBOARD
+===================================================== */
+
+.dashboard-container {
+max-width: 920px;
+
+margin: 0 auto;
+
+padding: 35px 25px;
+}
+
+.dashboard-box {
+background: white;
+
+border-radius: 10px;
+
+padding: 30px;
+
+box-shadow:
+0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard-box h2 {
+color: #285377;
+
+font-size: 26px;
+
+margin-bottom: 15px;
+}
+
+.success {
+color: #58945d;
+
+font-size: 16px;
+
+margin: 8px 0 28px;
+}
+
+
+/* =====================================================
+UPCOMING EVENT
+===================================================== */
+
+.upcoming-event {
+border: 2px solid #d9e0ef;
+
+border-radius: 10px;
+
+padding: 30px;
+}
+
+.upcoming-event h3 {
+color: #285377;
+
+font-size: 23px;
+
+margin-bottom: 22px;
+}
+
+.upcoming-event p {
+margin-bottom: 15px;
+
+font-size: 16px;
+
+color: #444;
+}
+
+.upcoming-event strong {
+color: #333;
+}
+
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+.footer {
+text-align: center;
+
+color: #888;
+
+font-size: 12px;
+
+padding: 25px;
+}
+
+
+/* =====================================================
+RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 750px) {
+
+.events-grid {
+grid-template-columns: 1fr;
+}
+
+.navbar {
+padding: 0 15px;
+}
+
+.nav-links {
+gap: 10px;
+}
+
+.nav-links a {
+font-size: 11px;
+}
+
+.hero h1 {
+font-size: 23px;
+}
+
+.dashboard-header {
+padding: 30px 20px;
+}
+
+.dashboard-header h1 {
+font-size: 23px;
+}
+
+.simple-event {
+flex-direction: column;
+gap: 8px;
+}
+}
